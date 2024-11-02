@@ -80,7 +80,7 @@ footer {
 }
 
 .blur {
-    filter: blur(10px); 
+    filter: blur(5px); 
 }
 
 .floating-buttons {
@@ -114,4 +114,8 @@ footer {
     50% {
         transform: translate(-50%, -55%); 
     }
+}
+
+body {
+    overflow-y: hidden;
 }
