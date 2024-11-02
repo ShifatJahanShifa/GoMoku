@@ -1,0 +1,43 @@
+body {
+    /* background-image: url('../images/gomoku-logo.png'); */
+    background-color: bisque;
+}
+
+h1,p {
+    text-align: center;
+    
+}
+
+header {
+    margin-top: 10%;
+}
+
+button {
+    padding: 2%;
+}
+
+/* button #play {
+    margin-left: 10%;
+} */
+
+#main {
+    display: flex;
+    flex-direction: row;
+    gap: 3;
+    max-height: 80%;
+}
+
+#d1 {
+    flex: 1;
+    margin-left: 30%;
+}
+
+#d2 {
+    flex: 1;
+    margin-right: 20%;
+}
+
+footer {
+    margin-bottom: 0px;
+    text-align: center;
+}
