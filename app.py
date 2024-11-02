@@ -7,7 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template('home.html')
 
-
 @app.route('/level/<string:level>')
 def level(level):
     return render_template(f"{level}.html")
