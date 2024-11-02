@@ -45,7 +45,12 @@
             </div>
         </div>
     </div>
+
 </section>
+<audio id="page-audio" autoplay muted>
+    <source src="{{ url_for('static', filename='audio/effect.mp3') }}" type="audio/mpeg">
+
+</audio>
 {% endblock %}
 
 
@@ -65,6 +70,13 @@
             }
         });
     }
+
+    window.addEventListener('load', function() {
+    var audio = document.getElementById('page-audio');
+    
+    audio.muted=false;
+    audio.play();
+    })
 </script>
 <script src="{{ url_for('static', filename='js/easy.js') }}"></script>
 
