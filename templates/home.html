@@ -16,7 +16,8 @@
     <head>
         <!-- <h1>GOMOKU</h1> -->
         <!-- <div style="background-color: rgb(190, 138, 54); box-shadow: azure; width: fit-content; margin: 1px auto; border-radius: 3%;"><h1 class="display-1" style="text-align: center;" >GOMOKU</h1></div> -->
-        <h1 class="display-1" style="text-shadow: 5px 5px #6f551f;">GOMOKU</h1>
+        <h1 class="display-1" style="text-shadow: 5px 5px white; background: linear-gradient(to bottom, black, #F9F8FF); -webkit-background-clip: text; color: transparent;">GOMOKU</h1>
+
         <h1 class="display-6">[Five in a row]</h1>
         <!-- spinner  -->
         <div class="text-center">
@@ -41,7 +42,7 @@
     <br>
     <main>
         <div id="main">
-            <div id="d1" class="text-center">
+          <!--  <div id="d1" class="text-center">
                 <button id="play" type="button" class="btn btn-warning">Select a level</button>
                 <br><br>
                 <div class="btn-group" role="group" aria-label="Basic example">
@@ -50,12 +51,25 @@
                     <button type="button" class="btn btn-primary" style="border-left: 1px white solid;" onclick="selectLevel('hard')">Hard</button>
                 </div>
             </div>
-            <div id="id2">
+            --->
+            <div id="id2" class="relative-container">
                 <aside>
                     <div class="text-center">
-                        <img src="../static/images/gomoku.jpeg" class="rounded" alt="gomoku-board" height="50%"
-                            width="50%">
-                    </div>
+                        <img id="gomokuImage" src="../static/images/image.png" class="rounded" alt="gomoku-board" height="50%" width="50%">
+                    </div> 
+                    
+                
+                    <div class="floating-buttons">
+                       <div class="button_play">
+                        <button id="play" type="button" class="btn btn-warning">Select a level</button> </br> 
+                       </div> 
+                       <div class="button_levels">
+                        <button type="button" class="btn btn-primary" onclick="selectLevel('easy')">Easy</button>
+                        <button type="button" class="btn btn-primary" onclick="selectLevel('medium')">Medium</button>
+                        <button type="button" class="btn btn-primary" onclick="selectLevel('hard')">Hard</button>
+                       </div>
+                        
+                    </div>                 
                 </aside>
             </div>
         </div>
