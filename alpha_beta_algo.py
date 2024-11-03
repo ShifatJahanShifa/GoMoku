@@ -8,12 +8,6 @@ from gameBoard import GameBoard, BLACK, WHITE, EMPTY
 #from .. import gameBoard
 # In algorithms/alpha_beta_algo.py
 
-
-
-
-
-
-
 from eval_fn import evaluation_state
 
 BLACK = 1
