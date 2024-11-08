@@ -1,0 +1,17 @@
+three parameters: 
+1. consecutive pieces consecutive
+2. number of blocked end of a sequence
+3. has empty space between a sequence 
+
+value tuple:
+// indexing: 2 3 4 5 consecutive pieces
+consec_score = (2, 5, 1000, 10000)
+block_count_score = (0.5, 0.6, 0.01, 0.25)
+not_current_score = (1, 1, 0.2, 0.15)
+empty_space_score = (1, 1.2, 0.9, 0.4)
+    
+
+rule-1: if there are less than 5 consecutive pieces of the same color and both ends of the sequence is blocked, then value =0
+rule-2: (winning condition) if there are 5 consecutive pieces of the same color and has empty space between, then value=8000
+rule-3: (winning condition) if there are 5 consecutive pieces of the same color and has empty space between, then value=10000
+rule-4: in all other cases, calculate the value based on the corresponding tuple.
