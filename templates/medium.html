@@ -9,10 +9,10 @@
 {% block content %}
 <section id="board" class="black">
     <div class="row">
-        <div class="col-lg">
+        <div class="col-lg" id="p1">
             <table class="desk"></table>
         </div>
-        <div class="col-lg">
+        <div class="col-lg" id="p2">
             <div class="float-left">
                 <table class="table info">
                     <tr>
@@ -20,8 +20,12 @@
                         <!-- <tr><img src="../static/images/mini.jpg"></tr> -->
                     </tr>
                     <tr></tr>
+                    <tr>
+                        <td style="text-align: center;"><img src="../static/images/char3_1-removebg-preview.png" height="100"></td>
+                    </tr>
+                    <tr></tr>
                     <tr><td class="text-center">
-                        <button type="button" class="btn btn-warning">Level 2</button>
+                        <button type="button" class="btn btn-warning">Level Medium</button>
                     </td></tr>
                     <th>Choose Your Color</th>
                     <tr>
@@ -39,6 +43,7 @@
                             <button data-action="init" class="btn btn-outline-dark">Clear</button>
                         </td>
                     </tr>
+                    
                 </table>
                 <p></p>
                 <div class="alert alert-danger d-none"></div>

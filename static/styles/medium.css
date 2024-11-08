@@ -1,6 +1,8 @@
 html * {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     background-color: bisque;
+    
+    /* background: no-repeat; */
 }
 
 .col-lg {
@@ -8,11 +10,21 @@ html * {
     /* margin-bottom: 10px; */
     padding-top: 15px;
     padding-bottom: 15px;
+    
 }
 
+#p1 {
+    /* background-image: url('../images/frame.jpg'); */
+    border: 10px solid rgb(191, 102, 102);
+    border-radius: 5px;
+    background-color: rgb(188, 138, 58);
+    margin-right: 30px;
+    /* box-shadow: 5px 10px whitesmoke; */
+}
 table.desk {
     border-collapse: collapse;
     border-style: hidden;
+    padding: 24px;
 }
 
 table.desk > thead > tr > td,
@@ -105,6 +117,20 @@ table.desk > tbody > tr[data-row="15"] > td[data-col="9"].white,
 table.desk > tbody > tr[data-row="15"] > td[data-col="15"].white {
     color: black;
     background-image: url("../images/x64w.png");
+}
+
+/* #p2 {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 30px;
+} */ 
+#p2 {
+    max-width: 575px;
+}
+
+#d1, #d2, #d3 {
+    width: 33.33%; /* Adjust based on how many cells you have */
+    text-align: center; /* Optional: Center align content */
 }
 
 table.info > thead > tr > td,
