@@ -85,9 +85,19 @@ $(function () {
                     if (data.status === 'OK') {
                         board.put(data.move.x, data.move.y, board.moves.length + 1, !currentColor);
                         over = data.game_status.finished;
+                        // if (over) {
+                        //     alert('You lost');
+                        // } else {
+                        //     current = !current;
+                        // } 
+
                         if (over) {
-                            alert('You lost');
-                        } else {
+                            setTimeout(function()
+                            {
+                                alert('You lost');
+                            },1000)
+                        } 
+                        else {
                             current = !current;
                         }
                     }
