@@ -10,12 +10,9 @@ from gameBoard import GameBoard, BLACK, WHITE, EMPTY
 
 from eval_fn import evaluation_state
 
-BLACK = 1
-WHITE = -1
-EMPTY = 0
-symbols = {BLACK: 'X', WHITE: 'O', EMPTY: '.'}
 
-def alpha_beta(state,alpha,beta,depth,is_max_state):
+
+def minimax(state,alpha,beta,depth,is_max_state):
 
     if depth == 0 or state.is_terminal():
         score = evaluation_state(state, -state.color)
@@ -26,7 +23,7 @@ def alpha_beta(state,alpha,beta,depth,is_max_state):
     if is_max_state:
         best_value = -math.inf
         for move in state.legal_moves():
-            value = alpha_beta(state.next(move),
+            value = minimax(state.next(move),
                                alpha,
                                beta,
                                depth-1,
@@ -45,7 +42,7 @@ def alpha_beta(state,alpha,beta,depth,is_max_state):
     else:
         best_value = math.inf
         for move in state.legal_moves():
-            value = alpha_beta(state.next(move),
+            value = minimax(state.next(move),
                             alpha,
                             beta,
                             depth-1,
@@ -58,43 +55,3 @@ def alpha_beta(state,alpha,beta,depth,is_max_state):
                 print("Pruning in Min State")
                 break
         return best_value
-
-
-def best_move(board, depth=3):
-    best_one = -math.inf
-    move_choice = None
-
-    for move in board.legal_moves():
-        new_board = board.next(move)
-        eval = alpha_beta(new_board, depth, -math.inf, math.inf, False)
-        if eval > best_one:
-            best_one = eval
-            move_choice = move
-
-    return move_choice
-
-
-
-if __name__ == "__main__":
-    board_size = 10
-    game_board = GameBoard(board_size)
-
-    print("Initial Board:")
-    print(game_board)
-
-    moves = [(2, 2), (3, 3), (4, 4)]
-    for move in moves:
-        game_board[move] = BLACK  
-        print(f"\nPlayer (BLACK) moved to {move}")
-        print(game_board)
-
-        ai_move = best_move(game_board)  # Corrected line
-        if ai_move is not None:
-            game_board[ai_move] = WHITE
-            print(f"\nAI (WHITE) moved to {ai_move}")
-            print(game_board)
-
-        if game_board.is_terminal():
-            winner = "BLACK" if game_board.winner == BLACK else "WHITE"
-            print(f"Game over! Winner: {winner}")
-            break
