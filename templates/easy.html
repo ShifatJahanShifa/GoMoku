@@ -71,10 +71,11 @@
 {% block js %}
 <script type="text/javascript">
     var $SCRIPT_ROOT = {{request.script_root | tojson | safe }};
+    console.log($SCRIPT_ROOT)
     function accessData(action, data, callback) {
         $.ajax({
             type: "GET",
-            url: $SCRIPT_ROOT + "/" + action,
+            url: $SCRIPT_ROOT + 'easy/'+ action,
             data: data,
             dataType: "JSON",
             success: callback,
