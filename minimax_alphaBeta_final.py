@@ -21,7 +21,7 @@ def minimax(state,alpha,beta,depth,is_max_state, evaluation_function):
                                False, evaluation_function)
             best_value = max(best_value,value)
 
-            alpha = max(alpha,best_move)
+            alpha = max(alpha,best_value)
             print(f"Max State - Move: {move}, Value: {value}, Best: {best_value}, Alpha: {alpha}, Beta: {beta}")
 
             if beta <= alpha:
