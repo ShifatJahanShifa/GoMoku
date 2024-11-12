@@ -19,7 +19,7 @@ def minimax(state,alpha,beta,depth,is_max_state, evaluation_function):
                                beta,
                                depth-1,
                                False, evaluation_function)
-            best_move = max(best_value,value)
+            best_value = max(best_value,value)
 
             alpha = max(alpha,best_move)
             print(f"Max State - Move: {move}, Value: {value}, Best: {best_value}, Alpha: {alpha}, Beta: {beta}")
@@ -38,7 +38,7 @@ def minimax(state,alpha,beta,depth,is_max_state, evaluation_function):
                             beta,
                             depth-1,
                             True, evaluation_function)
-            best_move = min(best_value,value)
+            best_value= min(best_value,value)
             beta=min(beta,best_value)
             print(f"Min State - Move: {move}, Value: {value}, Best: {best_value}, Alpha: {alpha}, Beta: {beta}")
 
